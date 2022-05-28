@@ -1,0 +1,5 @@
+0 Compost Bin
+1 Recycling Bin
+2 Garbage
+3 Containers
+4 Mixed Paper

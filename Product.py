@@ -33,10 +33,10 @@ class Product:
         """
         return self._recycle_type
 
-    def redeem(self, recycle_type) -> int:
+    def redeem(self) -> int:
         """Redeem the product's qr code and return the product id.
         """
-        url = pyqrcode.create(recycle_type)
+        url = pyqrcode.create(self._recycle_type)
         url.png('code.png', scale=4)
 
         return self._id

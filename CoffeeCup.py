@@ -7,11 +7,14 @@ class CoffeeCup(Product):
     Private instance variables:
         - _cost: the cost of the coffee cup ($)
         - _id: the product's unique identifier
-        - _recycle_type: a url to a webpage containing the product's recycle type.
+        - _recycle_url: a url to a webpage containing the coffee's recycle type.
+        - _bin: the bin that a coffee cup should be thrown into
     """
     _cost: float
     _id: int
-    _recycle_type: str
+    _recycle_url: str
+    _bin: str
 
     def __init__(self, cost: float, id: int) -> None:
-        super().__init__(cost, id, "http://localhost:63343/Website/Garbage.html?_ijt=kkv7qhumt2npulqpoutloig3el&_ij_reload=RELOAD_ON_SAVE")
+        super().__init__(cost, id, "http://localhost:63343/Website/Garbage.html?_ijt=kkv7qhumt2npulqpoutloig3el&_ij_reload=RELOAD_ON_SAVE",
+                         "garbage")

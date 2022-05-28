@@ -1,3 +1,5 @@
+"""Code snippet and model provided by Google's Teachable Machine, and modified by the team to fit the project."""
+
 from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np

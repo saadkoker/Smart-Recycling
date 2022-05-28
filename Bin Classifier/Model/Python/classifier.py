@@ -38,6 +38,3 @@ def predict(img_path):
             break
         else:
             counter += 1
-            
-
-

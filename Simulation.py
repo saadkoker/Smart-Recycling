@@ -6,6 +6,7 @@ from Newspaper import Newspaper
 from PlasticBottle import Bottle
 from classifier import predict
 
+# cashback amount for this simulation
 CASHBACK = 0.05
 
 
@@ -27,38 +28,44 @@ class Simulation:
 
         # Initialize products
         coffee1 = CoffeeCup(5.00, 101)
-        coffee2 = CoffeeCup(5.00, 102)
-        coffee3 = CoffeeCup(3.00, 103)
-
-        apple1 = Apple(2.00, 201)
-
-        soda1 = Soda(3.00, 301)
-
-        newspaper1 = Newspaper(1.00, 401)
-
-        bottle1 = Bottle(2.00, 501)
         bottle2 = Bottle(4.00, 502)
 
-        self.ids.extend([101, 102, 103, 201, 301, 401, 501, 502])
+        self.ids.extend([101, 502])
+
+        print("user1's current balance (before transaction): $" + str('{:.2f}'.format(user1.get_balance())))
 
         user1.remove_funds(coffee1.get_cost())  # user1 buys coffee1
         product_id = coffee1.redeem('coffee1')
+
+        print("user1 purchased a $" + str('{:.2f}'.format(coffee1.get_cost())) + " coffee.")
 
         if product_id in self.ids:
             self.ids.remove(product_id)
 
             if coffee1.get_bin() == predict('sim_images/garbage.jpg'):
                 user1.add_funds(CASHBACK)
+                print("user1 correctly disposed of the coffee cup. $" + str('{:.2f}'.format(CASHBACK)) + " cashback rewarded.")
 
-        print(user1.get_balance())
+        print("user1's current balance (after disposal): $" + str('{:.2f}'.format(user1.get_balance())))
+
+        print("user2's current balance (before transaction): $" + str('{:.2f}'.format(user2.get_balance())))
 
         user2.remove_funds(bottle2.get_cost())
         product_id = bottle2.redeem('bottle2')
+
+        print("user2 purchased a $" + str('{:.2f}'.format(bottle2.get_cost())) + " water bottle.")
 
         if product_id in self.ids:
             self.ids.remove(product_id)
 
             if bottle2.get_bin() == predict('sim_images/garbage.jpg'):
                 user2.add_funds(CASHBACK)
+            else:
+                print("user2 did not correctly dispose of the coffee cup. No cashback rewarded.")
 
-        print(user2.get_balance())
+        print("user2's current balance (after disposal): $" + str('{:.2f}'.format(user2.get_balance())))
+
+
+if __name__ == '__main__':
+    s = Simulation()
+    s.run()

@@ -8,7 +8,7 @@ class Newspaper(Product):
         - _cost: the cost of the newspaper ($)
         - _id: the product's unique identifier
         - _recycle_url: a url to a webpage containing the newspaper's recycle type.
-        - _bin: the bin that a coffee cup should be thrown into
+        - _bin: the bin that a newspaper should be thrown into
     """
     _cost: float
     _id: int

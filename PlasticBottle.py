@@ -8,7 +8,7 @@ class Bottle(Product):
         - _cost: the cost of the bottle ($)
         - _id: the product's unique identifier
         - _recycle_url: a url to a webpage containing the botle's recycle type.
-        - _bin: the bin that a coffee cup should be thrown into
+        - _bin: the bin that a plastic bottle should be thrown into
     """
     _cost: float
     _id: int

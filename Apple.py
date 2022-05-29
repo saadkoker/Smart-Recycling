@@ -8,7 +8,7 @@ class Apple(Product):
         - _cost: the cost of the apple ($)
         - _id: the product's unique identifier
         - _recycle_url: a url to a webpage containing the apple's recycle type.
-        - _bin: the bin that a coffee cup should be thrown into
+        - _bin: the bin that an apple should be thrown into
     """
     _cost: float
     _id: int

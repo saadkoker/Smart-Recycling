@@ -10,6 +10,7 @@ labels = ["compost", "recycling", "garbage", "mixed_containers", "mixed_paper"]
 # Load the model
 model = load_model('keras_model.h5', compile=False)
 
+
 def predict(img_path) -> str:
     result = None
     # Create the array of the right shape to feed into the keras model
@@ -42,7 +43,5 @@ def predict(img_path) -> str:
             counter += 1
 
     return result
-
-print(predict('bin.jpg'))
 
 

@@ -1,4 +1,4 @@
-# Smart Recycle
+# Smart Recycling
  
 Smart Recycling is our submission for TOHacks 2022. It is a cashback program that rewards users for sustainable recycling practices. 
 

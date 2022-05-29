@@ -16,4 +16,4 @@ class Newspaper(Product):
     _bin: str
 
     def __init__(self, cost: float, id: int) -> None:
-        super().__init__(cost, id, "https://anudevgill.github.io/Paper.html", "mixed_paper")
+        super().__init__(cost, id, "https://anudevgill.github.io/paper.html", "mixed_paper")

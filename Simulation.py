@@ -51,3 +51,14 @@ class Simulation:
                 user1.add_funds(CASHBACK)
 
         print(user1.get_balance())
+
+        user2.remove_funds(bottle2.get_cost())
+        product_id = bottle2.redeem('bottle2')
+
+        if product_id in self.ids:
+            self.ids.remove(product_id)
+
+            if bottle2.get_bin() == predict('sim_images/garbage_bin.jpg'):
+                user2.add_funds(CASHBACK)
+
+        print(user2.get_balance())

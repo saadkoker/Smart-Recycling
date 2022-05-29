@@ -42,10 +42,10 @@ class Product:
     def get_bin(self) -> str:
         return self._bin
 
-    def redeem(self) -> int:
+    def redeem(self, name: str) -> int:
         """Redeem the product's qr code and return the product id.
         """
         url = pyqrcode.create(self._recycle_url)
-        url.png('code.png', scale=4)
+        url.png(name + '.png', scale=4)
 
         return self._id

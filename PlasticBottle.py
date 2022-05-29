@@ -16,5 +16,4 @@ class Bottle(Product):
     _bin: str
 
     def __init__(self, cost: float, id: int) -> None:
-        super().__init__(cost, id, "http://localhost:63343/Website/Recycling.html?_ijt=e55rpeo04o8p61ghj14v8dquen&_ij_reload=RELOAD_ON_SAVE",
-                         "recycling")
+        super().__init__(cost, id, "https://anudevgill.github.io/Recycling.html", "recycling")

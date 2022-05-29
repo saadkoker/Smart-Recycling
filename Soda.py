@@ -16,5 +16,5 @@ class Soda(Product):
     _bin: str
 
     def __init__(self, cost: float, id: int) -> None:
-        super().__init__(cost, id, "http://localhost:63343/Website/Containers.html?_ijt=b4i9risrsarenvq43portq2vs5&_ij_reload=RELOAD_ON_SAVE",
+        super().__init__(cost, id, "https://anudevgill.github.io/Containers.html",
                          "mixed_containers")

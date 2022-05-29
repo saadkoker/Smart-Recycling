@@ -16,5 +16,4 @@ class Apple(Product):
     _bin: str
 
     def __init__(self, cost: float, id: int) -> None:
-        super().__init__(cost, id, "http://localhost:63343/Website/Compost.html?_ijt=7vt84fhsnhnufngjsafj2grt2k&_ij_reload=RELOAD_ON_SAVE",
-                         "compost")
+        super().__init__(cost, id, "https://anudevgill.github.io/index.html", "compost")

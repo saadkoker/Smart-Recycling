@@ -16,5 +16,4 @@ class CoffeeCup(Product):
     _bin: str
 
     def __init__(self, cost: float, id: int) -> None:
-        super().__init__(cost, id, "http://localhost:63343/Website/Garbage.html?_ijt=kkv7qhumt2npulqpoutloig3el&_ij_reload=RELOAD_ON_SAVE",
-                         "garbage")
+        super().__init__(cost, id, "https://anudevgill.github.io/Garbage.html", "garbage")

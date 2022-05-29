@@ -47,7 +47,7 @@ class Simulation:
         if product_id in self.ids:
             self.ids.remove(product_id)
 
-            if coffee1.get_bin() == predict('sim_images/garbage_bin.jpg'):
+            if coffee1.get_bin() == predict('sim_images/garbage.jpg'):
                 user1.add_funds(CASHBACK)
 
         print(user1.get_balance())
@@ -58,7 +58,7 @@ class Simulation:
         if product_id in self.ids:
             self.ids.remove(product_id)
 
-            if bottle2.get_bin() == predict('sim_images/garbage_bin.jpg'):
+            if bottle2.get_bin() == predict('sim_images/garbage.jpg'):
                 user2.add_funds(CASHBACK)
 
         print(user2.get_balance())

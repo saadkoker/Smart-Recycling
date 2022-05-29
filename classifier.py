@@ -1,5 +1,6 @@
 """Code snippet and model provided by Google's Teachable Machine, and modified by the team to fit the project."""
 
+from unittest import result
 from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
@@ -10,6 +11,7 @@ labels = ["compost", "recycling", "garbage", "mixed_containers", "mixed_paper"]
 model = load_model('keras_model.h5', compile=False)
 
 def predict(img_path) -> str:
+    result = None
     # Create the array of the right shape to feed into the keras model
     # The 'length' or number of images you can put into the array is
     # determined by the first position in the shape tuple, in this case 1.
@@ -34,8 +36,13 @@ def predict(img_path) -> str:
     counter = 0
     for confidence in prediction.flatten():
         if (confidence*100) > conf_threshold:
-            return(labels[counter])
+            result = labels[counter]
             break
         else:
             counter += 1
+
+    return result
+
+print(predict('bin.jpg'))
+
 
